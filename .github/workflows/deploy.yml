@@ -23,6 +23,8 @@ jobs:
       - run: pip install --upgrade setuptools
       - run: pip install 'ansible ~= 2.9'
       - run: ansible-galaxy collection install -p ./collections -r requirements.yml --force
+      - run: ansible-galaxy collection install -r requirements.yml --force
+      - run: ansible-galaxy collection list
       - run: ansible-playbook ./collections/ansible_collections/ndpnt/deploy/playbooks/playbook.yml
 
 
