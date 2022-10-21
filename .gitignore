@@ -2,3 +2,5 @@
 node_modules
 package-lock.json
 data
+vault.key
+.env

@@ -1,0 +1,31 @@
+{
+  "services": {
+    "repository": "https://github.com/OpenTermsArchive/france-elections-declarations.git"
+  },
+  "recorder": {
+    "versions": {
+      "storage": {
+        "git": {
+          "snapshotIdentiferTemplate": "https://github.com/OpenTermsArchive/france-elections-snapshots/commit/%SNAPSHOT_ID",
+          "repository": "git@github.com:OpenTermsArchive/france-elections-versions.git",
+          "path": "./data/versions"
+        }
+      }
+    },
+    "snapshots": {
+      "storage": {
+        "git": {
+          "repository": "git@github.com:OpenTermsArchive/france-elections-snapshots.git",
+          "path": "./data/snapshots"
+        }
+      }
+    }
+  },
+  "fetcher": {
+    "language": "fr"
+  },
+  "dataset": {
+    "title": "france-elections",
+    "versionsRepositoryURL": "https://github.com/OpenTermsArchive/france-elections-versions"
+  }
+}
