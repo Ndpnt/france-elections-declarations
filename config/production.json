@@ -1,6 +1,6 @@
 {
   "services": {
-    "repository": "https://github.com/OpenTermsArchive/france-elections-declarations.git"
+    "repository": "https://github.com/Ndpnt/france-elections-declarations.git"
   },
   "recorder": {
     "versions": {
