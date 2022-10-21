@@ -9,7 +9,7 @@
     "test:modified": "git diff --name-only HEAD $(git merge-base HEAD origin/main) -- ./declarations/ | grep -v .history | grep -v .filters | sed 's/declarations\\///g' | sed 's/.json//g' | sed 's/.*/\"&\"/' | xargs -r npm test",
     "track:modified": "git diff --name-only HEAD $(git merge-base HEAD origin/main) -- ./declarations/ | grep -v .history | grep -v .filters | sed 's/declarations\\///g' | sed 's/.json//g' | sed 's/.*/\"&\"/' | xargs -r npm run track -- -s"
   },
-  "devDependencies": {
+  "dependencies": {
     "open-terms-archive": "git+https://git@github.com/ambanum/OpenTermsArchive#update-ops"
   }
 }
