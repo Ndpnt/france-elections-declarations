@@ -1,4 +1,4 @@
 ---
 collections:
-- name: ndpnt.deploy
-  version: 1.0.5
+- name: ota_bot.deployment
+  version: 0.0.2

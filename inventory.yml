@@ -6,4 +6,4 @@ all:
   vars:
     ansible_user: debian
     app_config_path: ./config/production.json
-    collection_name: france-elections
+    ota_collection_name: france-elections
