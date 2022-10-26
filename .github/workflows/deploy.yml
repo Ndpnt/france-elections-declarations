@@ -5,8 +5,8 @@ on:
 
 jobs:
   test:
-    uses: "./test.yml@main"
-    
+    uses: "./.github/workflows/test.yml@main"
+
   deploy:
     runs-on: ubuntu-latest
 
