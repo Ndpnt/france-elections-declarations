@@ -9,16 +9,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      # - name: Get target server fingerprint
-      #   id: get_fingerprint
-      #   uses: mikefarah/yq@master
-      #   with:
-      #     cmd: yq '.france-elections.hosts.["54.37.5.206"].ed25519_fingerprint' inventory.yml
+      - name: Get target server fingerprint
+        id: get_fingerprint
+        uses: mikefarah/yq@master
+        with:
+          cmd: yq '.all.hosts.*.ed25519_fingerprint' inventory.yml
       - name: Set up SSH
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SERVER_SSH_KEY }}
-          known_hosts: 54.37.5.206 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIaOOuJz7hxaQ3nj5gZ7CUPgf6bCsrr0+H3+9jT4aP4t
+          known_hosts: ${{ steps.get_hostname.outputs.result }} ssh-ed25519 ${{ steps.get_fingerprint.outputs.result }}
       - run: echo "${{ secrets.ANSIBLE_VAULT_KEY }}" > vault.key
       - run: pip install --upgrade setuptools
       - run: pip install 'ansible ~= 2.9'
