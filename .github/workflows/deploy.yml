@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    uses: "OpenTermsArchive/template-declarations/templates/.github/workflows/test.yml@main"
+    uses: "./test.yml@main"
     
   deploy:
     runs-on: ubuntu-latest
